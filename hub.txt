@@ -1,0 +1,5 @@
+hub HG03942.cen20
+shortLabel HG03942.cen20
+longLabel cen20 HG03942
+genomesFile genomes.txt
+email  fedorrik1@gmail.com
