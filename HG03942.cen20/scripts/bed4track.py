@@ -3,7 +3,6 @@ from tsv import read_tsv, print_tsv
 
 
 # check score
-
 out_bed = []
 for line in read_tsv(argv[1]):
     if line[0] == 'track':
