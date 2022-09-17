@@ -1,6 +1,6 @@
 genome HG03942.cen20
 trackDb HG03942.cen20/trackDb.txt
-twoBitPath HG03942/HG03942.cen20.2bit
+twoBitPath HG03942.cen20/HG03942.cen20.2bit
 organism Homo Sapiens
 defaultPos HG03942.cen20:194000-837860
 
