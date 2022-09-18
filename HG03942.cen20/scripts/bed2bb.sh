@@ -4,7 +4,7 @@
 for bed in ../bed/*.bed
 do
   track=`echo $bed | awk '{split($0, name, "/"); print name[3]}' | awk '{split($0, name, "."); print name[1]}'`
-  python bed4track.py ../bed/$track.bed > bed4track.bed
+  python bed4track.py ../bed/$track.bed | sort -k1,1 -k2,2n > bed4track.bed
   bedToBigBed bed4track.bed chrom.sizes ../bb/$track.bb
   rm bed4track.bed
 done
