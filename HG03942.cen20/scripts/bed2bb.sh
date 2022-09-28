@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/zsh
 # fastools is my scripts for workong with fasta files https://github.com/fedorrik/fastools
-~/Programs/my/fastools/fastools seqlen ../HG03942.cen20.fa > chrom.sizes
+~/Programs/my/fastools/fastools seqlen ../../../HG03942.cen20.fa > chrom.sizes
 for bed in ../bed/*.bed
 do
   track=`echo $bed | awk '{split($0, name, "/"); print name[3]}' | awk '{split($0, name, "."); print name[1]}'`
-  python bed4track.py ../bed/$track.bed | sort -k1,1 -k2,2n > bed4track.bed
+  python bed4track.py ../bed/$track.bed | bedtools sort > bed4track.bed
   bedToBigBed bed4track.bed chrom.sizes ../bb/$track.bb
   rm bed4track.bed
 done
