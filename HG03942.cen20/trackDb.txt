@@ -49,3 +49,16 @@ visibility dense
 type bigBed 9
 itemRgb on
 maxItems 100000
+
+track repmask
+type bigBed
+bigDataUrl bb/repmask.bb
+shortLabel RepeatMasker
+longLabel RepeatMasker
+itemRgb on
+group Centromere
+priority 5
+visibility dense
+type bigBed 9
+itemRgb on
+maxItems 100000
